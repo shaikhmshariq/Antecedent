@@ -15,6 +15,9 @@
 	<property name="serviceInterface" value="com.sitegraph.core.image.IImageThumbnailer"></property>
 	<property name="serviceUrl" value="rmi://localhost:1099/ImageService"></property> 
 </bean>
-
+<bean id="pdfThumbnailer" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+	<property name="serviceInterface" value="com.sitegraph.core.pdf.IPdfThumbnailer"></property>
+	<property name="serviceUrl" value="rmi://localhost:1099/PdfService"></property> 
+</bean>
 
 </beans>

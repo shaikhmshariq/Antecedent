@@ -37,7 +37,7 @@ public class WebAppUtils {
 	 * This method is used to resolve image name based on its attributes.
 	 */
 	public static String resolvePdfStoragePath(PdfAttributes pdfAttributes,String inputUrl){
-		String pdfFilepath =  getUniquePath(inputUrl);
+		String pdfFilepath = WebAppConstants.PDF_ABSOLUTE_PATH+ getUniquePath(inputUrl);
 		File domainDir = new File(pdfFilepath);
 		domainDir.mkdir();
 		return  pdfFilepath + WebAppConstants.DEFAULT_PDF_PREFIX + pdfAttributes.getPdfTemplateSize()+SiteGraphConstants.PDF_FILE_SUFFIX;

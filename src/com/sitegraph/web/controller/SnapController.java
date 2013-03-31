@@ -28,7 +28,7 @@ import com.sitegraph.core.util.WebAppUtils;
 @RequestMapping("/images")
 public class SnapController implements ServletContextAware{
 
-	@Autowired
+	@Autowired(required=true)
 	private IImageThumbnailer thumbnailer;
 	private ServletContext servletContext;
 	
